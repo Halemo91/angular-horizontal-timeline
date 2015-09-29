@@ -1,24 +1,113 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100);
 
 .timeline {
+width: 150px;
+	height: 100px;
+	position: absolute;
+
+
 	display: inline-block;
-	height: 60px;
-	width: 100%;
-	font: normal bold 9px/20px Roboto;
-	
+	height: 80px;
+	width: 110%;
+	font: normal bold 15px/20px Roboto;
 	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFEEEEEE', endColorstr='#FFEEEEEE');
-	background: #eee;
-	background:
-		url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgi…3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=');
-	background: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, #eeeeee), color-stop(35%, #fcfcfc), color-stop(68%, #f7f7f7),
-		color-stop(100%, #eeeeee), color-stop(100%, #eeeeee));
-	background: -moz-linear-gradient(left, #eeeeee 0%, #fcfcfc 35%, #f7f7f7 68%, #eeeeee 100%, #eeeeee 100%);
-	background: -webkit-linear-gradient(left, #eeeeee 0%, #fcfcfc 35%, #f7f7f7 68%, #eeeeee 100%, #eeeeee 100%);
+	background: #EEE8AA;
 	background: linear-gradient(to right, #eeeeee 0%, #fcfcfc 35%, #f7f7f7 68%, #eeeeee 100%, #eeeeee 100%);
-	border: 1px solid #eee;
-  -moz-box-shadow: 0 2px 2px #D2D2D2;
-  -webkit-box-shadow: 0 2px 2px #D2D2D2;
-  box-shadow: 0 2px 2px #D2D2D2;
+	border: 1px solid #32CD32;
+}
+.EventsSlider {
+	font-size: 1.5em;
+	font-weight: bold;
+	top: 150px;
+	left: 88px;
+	padding: 20px;
+  width: 150px;
+	height: 200px;
+	position: absolute;
+	display: inline-block;
+	height: 290px;
+	width: 80%;
+	font: normal bold 15px/20px Roboto;
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFEEEEEE', endColorstr='#FFEEEEEE');
+	background: #F8F8F8  ;
+	border: 1px solid #4169E1;
+}
+.EventsSlider2 {
+	font-size: 1.5em;
+	font-weight: bold;
+  width: 100px;
+	height: 200px;
+	position: absolute;
+	display: inline-block;
+	height: 290px;
+	width: 82%;
+	font: normal bold 15px/20px Roboto;
+	filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FFEEEEEE', endColorstr='#FFEEEEEE');
+	background: #F8F8F8  ;
+	border: 1px solid #4169E1;
+}
+.timeline-event-box {
+	font-size: 1.5em;
+	position: relative;
+	background: #C0C0C0;
+	top: 1px;
+	width: 500px;
+	left: -2px;
+	padding: 5px;
+
+}
+h1 {
+    color: green;
+    text-align: center;
+}
+p {
+	color:black;
+font-style: bold;
+	font-size:33;
+	line-height: 33px;
+}
+  .panel-body {
+background:#C0C0C0;
+ box-shadow: 0 0 30px black;
+}
+#title {
+	margin:76px 0px 0px 200px;
+	position: center;
+}
+.m {
+  display: block;
+	position: right;
+}
+#lefttitle {
+	float:center;
+}
+
+#righttitle {
+	float:center;
+}
+
+.title {
+	font-style: italic;
+	color:green;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: 100px;
+	letter-spacing: 2px;
+	margin: 26px 0px 0px 5px;
+position: right;
+}
+.container {
+  position: absolute;
+}
+
+.container_button {
+
+  text-align: left;
+}
+.container_button2 {
+  display: block;
+
+  text-align: right;
 }
 
 .front {
@@ -26,7 +115,7 @@
 }
 
 .timeline-left {
-	width: 5%;
+	width: 10%;
 	height: 100%;
 	float: left;
 	text-align: center;
@@ -35,12 +124,12 @@
 .timeline-center {
 	height: 100%;
 	padding-top: 20px;
-	width: 90%;
+	width: 80%;
 	float: left;
 }
 
 .timeline-right {
-	width: 5%;
+	width: 10%;
 	height: 100%;
 	float: left;
 	text-align: center;
@@ -58,37 +147,38 @@
 
 .timeline-event {
 	position: absolute;
-	width: 2px;
-	height: 28px;
-	background: #00BA26;
+	width: 0px;
+
+	height: 0px;
+	background: black;
 	top: -20px;
 	cursor: pointer;
 }
 
 .timeline-event span {
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 12px 5px 0 5px;
-	border-color: #00BA26 transparent transparent transparent;
+	width: 100;
+	height: 100;
+
 	position: absolute;
 	top: -10px;
 	left: -4px;
+
+
+
 }
 
-.progress {
-	height: 15px;
+
+.progg {
+	height: 22px;
 	position: relative;
 	padding: 1px;
 	background: #d6d6d6;
 }
 
-.progress>span {
+.progg>span {
 	display: block;
 	height: 100%;
 	background-repeat: repeat-x;
-	background-image:
-		url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAQCAIAAACgHXkXAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAmklEQVR42n2QoRICMQxE34YiGCQKzZ+g+VoEik9BIlA4BsNkEXdXyjFlRSbdJM1udLr6eL7cl9un1saSMCs/Nq/bYb8LGkiqeWYC0TDMWiVKZn2DAOyRsSkIyJatiCBs/FuZUEJIi+m7ucyutEF5+SrX3CnJJvp7AaKJ4K/1mURvTtJobPD9gYGwLfWnhzvGdLVk7jDRX+WZvAFVGTu3Dqy+5gAAAABJRU5ErkJggg==);
 	position: relative;
 	z-index: 10;
 }
@@ -96,7 +186,7 @@
 .timeline-bg {
 	position: relative;
 	padding: 0px;
-	top: -22px;
+	top: -15px;
 }
 
 .timeline-month {
@@ -107,8 +197,8 @@
 }
 
 .timeline-month span {
-	color: white;
-	font-size: 10px;
+	color: black;
+	font-size: 15px;
 	padding: 0 2%;
 	margin: 0;
 	height: 100%;
@@ -116,25 +206,46 @@
 	position: relative;
 	top: -4px;
 }
-
+.timeline-monthseprate {
+	position: absolute;
+	display: inline-block;
+	background: green;
+	top: 0px;
+	width: 11px;
+	height: 11px;
+}
 .timeline-day {
 	position: absolute;
 	display: inline-block;
-	background: #EDEDED;
+
 	top: 0px;
 	width: 1px;
-	height: 13px;
+	height: 1px;
 }
-
+.timeline-today {
+	position: absolute;
+	display: inline-block;
+	background: #FF0000;
+	top: 0px;
+	width: 1px;
+	height: 11px;
+}
 .timeline-day span {
-	color: #bab9c9;
-	font-size: 10px;
+	color: green;
+	font-size: 9px;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	left: 5px;
+}
+.timeline-current{
+	color: green;
+	font-size: 13px;
 	padding: 0;
 	margin: 0;
 	position: relative;
 	left: -5px;
 }
-
 .timeline-day span i {
 	border-left: 5px solid transparent;
 	border-bottom: 5px solid #bab9c9;
@@ -146,16 +257,7 @@
 	top: 10px;
 }
 
-.timeline-event-box {
-	font-size: 1.2em;
-	position: relative;
-	background: #ffffff;
-	border: 1px solid #C7C7C7;
-	top: 30px;
-	width: 200px;
-	left: -20px;
-	padding: 5px;
-}
+
 .timeline-event-box:after, .timeline-event-box:before {
 	bottom: 100%;
 	left: 10%;
