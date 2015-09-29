@@ -5,7 +5,7 @@ Simple horizontal timeline directive for AngularJS
 You can download all necessary angular-horizontal-timeline files manually or install it with bower:
 
 ```
-$ bower install --save angular-horizontal-timeline
+$ bower install --save angular-timeline-ibra
 ```
 
 # Load
