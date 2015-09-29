@@ -1,0 +1,57 @@
+<html>
+<div class="timeline">
+
+<div class="timeline-left">
+	<label>Start Date  {{startDate}}</label>
+</div>
+
+<div class="timeline-center">
+<div class="progg">
+	<span ng-style="{width:progg_percent+\'%\'}"></span>
+	<ul class="timeline-events">
+
+
+	<div  ng-if="event.date >startDate && event.date < endDate" >
+
+		<section   class="timeline-event"   ng-repeat="event in events"
+			ng-click="selectedEvent[$index]=true"
+			ng-mouseleave="selectedEvent[$index]=false"
+			event-date="event.date"
+			title="{{event.date}}"
+			timeline-event-marker> <span  class="glyphicon glyphicon-tags"></span>
+			<section   class="EventsSlider2"
+				ng-show="selectedEvent[$index]"
+				ng-hide="!selectedEvent[$index]"
+				ng-bind-html="event.title | unsafe">
+			</section>
+</div>
+		</section>
+
+	</ul>
+<div class="EventsSlider"  >
+<div ng-bind-html="mycontent" >
+</div>
+
+</div>
+	<ul class="timeline-bg">
+		<li class="timeline-month" ng-repeat="month in months"
+			timeline-month><span title="{{month.date}}">{{month.name}}</span>
+			<ul>
+
+				<li class="timeline-day"  ng-repeat="day in month.days"
+
+					ng-style="{ \'left\' : ($index * (95/month.days.length) )+\'%\'}">
+					<span title="{{month.date + \'-\' + day}}"><i></i>{{day}}</span>
+
+				</li>
+
+			</ul></li>
+	</ul>
+</div>
+</div>
+<div class="timeline-right">
+	<label>End Date {{endDate}}</label>
+</div>
+<br>
+<br>
+</html>
