@@ -1,9 +1,6 @@
 # angular-horizontal-timeline
 Simple horizontal timeline directive for AngularJS
 
-# Demo
-https://eowo.github.io
-
 # Install
 You can download all necessary angular-horizontal-timeline files manually or install it with bower:
 
@@ -26,9 +23,10 @@ angular.module('app', ['angular-horizontal-timeline']);
 
 # Usage
 ```
-<horizontal-timeline 
-  start-date="2015-01" 
-  end-date="2015-05"
-  events="[{"date":"2015-03-24","content":"<p>lorem ipsum</p>"},{"date":"2015-04-07","content":"<p>lorem ipsum</p>"}]">
-</horizontal-timeline>
+<combined-timeline selected-event="selected"
+			start-date="{{startDate}}"
+			end-date="{{endDate}}"
+			events="events" zoomout="zoomout()" zoomin="zoomin()" today="today()" defaultt ="defaultt()" left ="left()" right="right()"  currentday="currentday" mytitle="mytitle"  mycontent="mycontent"  >
+
+</combined-timeline> 
 ```
